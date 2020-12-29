@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <center>
+      <form style="width: 100px height: 100px" action="login" method="post">
+        <input style="width: 30px height: 20px" type="text" name="teamname" id="teamname" value="" placeholder="teamname"><br>
+        <input style="width: 30px height: 20px" type="text" name="email" value="" id="email" placeholder="email"><br>
+        <input style="width: 30px height: 20px" type="password" name="password" value="" placeholder="password"><br>
+        <input style="width: 30px height: 20px" onclick="detailsSave()"  type="submit">
+      </form>
+      <script type="text/javascript">
+        function detailsSave(){
+          localStorage.teamName = document.getElementById('teamname').value;
+        }
+      </script>
+    </center>
+  </body>
+</html>
